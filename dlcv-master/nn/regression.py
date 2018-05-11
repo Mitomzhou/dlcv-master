@@ -29,7 +29,7 @@ class Net(nn.Module):
         x = self.predict(x)
         return x
 
-#print
+
 net = Net(1, 10, 1)
 print(net)
 print(net)
