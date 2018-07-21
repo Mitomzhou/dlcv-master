@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
-encoding//nn/cnn.py=utf-8
+encoding//linear/svm_loss.py=utf8
+encoding//nn/cnn_pytorch.py=utf-8

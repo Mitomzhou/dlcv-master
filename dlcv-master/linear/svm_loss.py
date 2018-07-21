@@ -4,9 +4,12 @@ Created on May 11, 2018
 
 @author: mitom
 '''
+
+
 import numpy as np
 from numpy import random as nprand
 import cPickle as pickle
+
 
 def svm_loss_native(W, X, y, reg):
     """
@@ -19,7 +22,7 @@ def svm_loss_native(W, X, y, reg):
     Returns:
     - loss_sum: total loss
     Description:
-    - loss= 1/N * EE(max(0,W*X-score[y[i]]+1)) + reg*||W*W||
+    - loss_sum = 1/N * EE(max(0,W*X-score[y[i]]+1)) + reg*||W*W||
     """
     train_num = X.shape[1]
     train_class_num = W.shape[0]
@@ -35,6 +38,7 @@ def svm_loss_native(W, X, y, reg):
                     loss_i[i] = 0
     loss_sum = sum(loss_i)/train_num + reg*np.sum(W*W)
     return loss_sum
+
 
 if __name__ == '__main__':
     print 'loss= (1/N) * EE(max(0,W*X-score[y[i]]+1)) + reg*||W*W||'
